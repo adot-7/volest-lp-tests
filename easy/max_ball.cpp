@@ -9,7 +9,7 @@ typedef HPolytope<Point> HPolytopeType;
 
 int main()
 {
-  //For a 2D simplex
+	// For a 2D simplex
 	HPolytopeType HP = generate_simplex<HPolytopeType>(2, false);
 	std::cout << "Polytope: \n";
 	HP.print();
@@ -21,17 +21,17 @@ int main()
 			  << ball_vec.first[1] << "), Radius = "
 			  << ball_vec.second << std::endl;
 
-  // For a 3D hypercube
-	HPolytopeType HP = generate_cube<HPolytopeType>(3, false);
+	// For a 3D hypercube
+	HPolytopeType HP2 = generate_cube<HPolytopeType>(3, false);
 	std::cout << "Polytope: \n";
 	HP.print();
 	std::cout << "\n";
-	std::cout << "This polytope is a hypercube of dimension: " << HP.dimension() << std::endl;
+	std::cout << "This polytope is a hypercube of dimension: " << HP2.dimension() << std::endl;
 
-	auto ball_vec = HP.ComputeInnerBall();
-	std::cout << "Maximum Inner ball: Center = (" << ball_vec.first[0] << ", "
-			  << ball_vec.first[1] << ", " << ball_vec.first[2] << "), Radius = "
-			  << ball_vec.second << std::endl;
+	auto ball_vec2 = HP2.ComputeInnerBall();
+	std::cout << "Maximum Inner ball: Center = (" << ball_vec2.first[0] << ", "
+			  << ball_vec2.first[1] << ", " << ball_vec2.first[2] << "), Radius = "
+			  << ball_vec2.second << std::endl;
 
 	return 0;
 }
