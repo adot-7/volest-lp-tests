@@ -1,5 +1,6 @@
 # volest-lp-tests
 
-This repo contains the implementations for the tests provided for the project replacing lpsolve in volesti.
+This repo contains my implementations and outputs for the tests provided for the project replacing lpsolve.
+
 
 
